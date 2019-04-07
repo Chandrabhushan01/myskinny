@@ -1,0 +1,46 @@
+# OS X
+.DS_Store
+
+# Python
+*.pyc
+*.patch
+*.pdf
+
+# Django Settings file
+#settings.py
+
+# Development database
+#*.db
+
+# Eclipse/Aptana
+.settings
+
+# svn
+.svn
+
+# svn
+.json
+
+.settings
+# Emacs
+*~
+
+#log files
+*.log
+
+#Editor
+.vscode
+.project
+.pydevproject
+.idea/
+venv/
+local_settings.py
+lib/
+lib64/
+lib64
+bin/
+include/
+share/
+db.sqlite3
+pip-selfcheck.json
+pyvenv.cfg
