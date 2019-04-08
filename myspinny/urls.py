@@ -21,8 +21,8 @@ from inventory.views import BoxViewSets
 
 ROUTER = DefaultRouter()
 ROUTER.register(r'api/v1/box', BoxViewSets, 'box')
-urlpatterns = ROUTER.urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^token-auth/', ObtainAuthToken.as_view(), name='token_auth'),
 ]
+urlpatterns += ROUTER.urls

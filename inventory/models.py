@@ -21,16 +21,16 @@ class Box(models.Model):
 		self.volume = self.length * self.breadth * self.height
 		return super(Box, self).save(*args, **kwargs)
 
-	def __init__(self):
-		return "length: {} breadth: {} height: {} By {}".format(
-			self.length, self.breadth, self.height,
-			self.created_by.username
-		)
+	# def __init__(self):
+	# 	return "length: {} breadth: {} height: {} By {}".format(
+	# 		self.length, self.breadth, self.height,
+	# 		self.created_by.username
+	# 	)
 
 
 class ConditionParameter(models.Model):
 	name = models.CharField(max_length=64)
 	value = models.FloatField()
 
-	def __init__(self):
-		return self.name
+	# def __init__(self):
+	# 	return self.name

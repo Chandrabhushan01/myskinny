@@ -23,7 +23,7 @@ def populate_condition_param_data(apps, schema_editor):
 
     ConditionParameter = apps.get_model('inventory', 'ConditionParameter')
     for param in parameters:
-        val = ConditionParameter.objects.create(param)
+        val = ConditionParameter.objects.update_or_create(**param)
 
 
 class Migration(migrations.Migration):
