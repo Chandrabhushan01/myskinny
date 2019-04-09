@@ -26,20 +26,9 @@ class BoxSerializer(serializers.ModelSerializer):
         no_of_boxes_added_in_a_week_by_a_user = ConditionParameter.objects.get(
             name="no_of_boxes_added_in_a_week_by_a_user"
         ).value
-        print(
-            maximum_area_of_all_boxes,
-            average_volume_of_user_boxes,
-            no_of_boxes_added_in_a_week,
-            no_of_boxes_added_in_a_week_by_a_user,
-            area,
-            volume
-        )
         boxes = Box.objects.all()
         if boxes.count() > 0:
             current_area_sum_of_all_boxes = boxes.aggregate(Sum('area'))['area__sum']
-            print(
-                current_area_sum_of_all_boxes
-            )
             expected_avg = (current_area_sum_of_all_boxes + area) / (boxes.count() + 1)
             # check maximum_area_of_all_boxes
             if expected_avg > maximum_area_of_all_boxes:
